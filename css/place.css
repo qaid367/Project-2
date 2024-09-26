@@ -1,0 +1,25 @@
+header {
+    color: red !important;
+    text-align: center;
+    display: flex;
+    background-color: blue;
+    flex-direction: column;
+    margin: 0 auto;
+}
+
+.place {
+  font-size: 40px;
+  margin-bottom: 100px;
+  /* animation: dropDown 2s forwards; */
+  color: rgb(42, 140, 40);
+}
+
+@keyframes dropDown {
+  0% {
+    margin-bottom: 40px;
+  }
+
+  100% {
+    margin-top: 10px;
+  }
+}

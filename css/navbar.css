@@ -1,0 +1,88 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  font-family: "Poppins";
+  background-color: orange;
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 110%;
+  height: 110vh;
+  background-image: url("https://static.vecteezy.com/system/resources/previews/021/368/974/large_2x/red-orange-background-hd-pictures-and-wallpaper-for-free-download-free-photo.jpg");
+  background-attachment: fixed;
+  min-height: 100%;
+  background-size: cover;
+  background-color: orange;
+  z-index: 0;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.content {
+  z-index: 2;
+}
+
+.nav-parent {
+  position: sticky;
+  top: 0;
+  font-weight: 700;
+  display: flex;
+  overflow: hidden;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding: 5px;
+  margin-top: 10px;
+  background-color: transparent;
+}
+
+.nav {
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  background-color: orange;
+  width: 100% !important;
+  height: max-content;
+  display: flex;
+}
+
+.nav a {
+  padding: 15px;
+  cursor: pointer;
+  background-color: hsla(39, 100%, 50%, 0.913);
+  color: white;
+  text-decoration: none;
+  transition: all 0.5s ease;
+  font-size: large;
+  cursor: pointer;
+}
+
+.nav a:hover {
+  font-size: 20px;
+  background-color: rgb(255, 196, 0) !important;
+}
+
+.nav .current {
+  background-color: rgb(255, 187, 0);
+}
+
+.content, .nav-parent {
+  animation: fadeIn 1s forwards;
+}
