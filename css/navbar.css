@@ -10,6 +10,7 @@ html,
 body {
   height: 100%;
   margin: 0;
+  overflow-y: auto;
   font-family: "Poppins";
   background-color: orange;
 }
@@ -43,6 +44,7 @@ body {
 }
 
 .nav-parent {
+  z-index: 99;
   position: sticky;
   top: 0;
   font-weight: 700;

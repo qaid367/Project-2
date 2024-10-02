@@ -1,32 +1,133 @@
+:root {
+  --hue: 400; /* change me */
+  --shadow: oklch(25% 0.2 var(--hue));
+  --text-shadow: 0 2px 2px var(--shadow);
+  --color: rgb(65, 165, 42);
+}
+
 header {
-  color: red !important;
-  text-align: center;
   display: flex;
-  background-color: blue;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
   flex-direction: column;
-  margin: 0 auto;
   margin-top: 50px;
 }
 
-header div {
-  row-gap: 0;
-}
-
-.place {
-  font-size: 40px;
-  /* animation: dropDown 2s linear; */
-  color: rgb(42, 140, 40);
+header h1 {
+  color: var(--color);
+  font-weight: bolder;
+  text-shadow: var(--text-shadow);
+  animation: dropDown 2s forwards;
 }
 
 @keyframes dropDown {
   0% {
-    margin-bottom: 0;
-    color: red;
+    transform: translateY(-20px);
+    letter-spacing: 0ch;
+    color: rgb(137, 63, 63);
   }
 
   100% {
-    margin-top: 0px;
-    margin-bottom: 0;
-    color:green;
+    color: var(--color);
+    transform: translateY(0);
   }
+}
+
+span.place {
+  animation: dropDown 2s forwards;
+  /* text-shadow: 2px 0px 3px rgba(0, 0, 0, 0.5); */
+  text-shadow: var(--text-shadow);
+
+  font-size: 5vi;
+  letter-spacing: -0.15ch;
+  line-height: 0.75;
+}
+
+main {
+  margin-top: 100px;
+  padding: 20px;
+}
+
+.about_headers {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  gap: 50%;
+  color: var(--color);
+  text-shadow: var(--text-shadow) !important;
+}
+
+.about {
+  text-shadow: var(--text-shadow) !important;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  height: max-content;
+  padding: 10px;
+  background-color: rgba(255, 106, 0, 0.8);
+  border-radius: 10px;
+}
+
+.images img {
+  width: 200px;
+  height: 150px;
+  filter: drop-shadow(var(--text-shadow));
+  cursor: pointer;
+  /* transition: 1s ease; */
+}
+
+.images img:active {
+  width: max-content;
+  height: max-content;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-height: 500px;
+  z-index: 99;
+}
+
+.images {
+  display: grid;
+  padding: 10px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  grid-template-columns: repeat(3, 1fr);
+  height: 100%;
+}
+
+.text {
+  width: 70%;
+  margin: 0 auto;
+  height: 100%;
+  text-align: center;
+  color: var(--color);
+}
+
+.text h1 a {
+  color: var(--color);
+  text-decoration: underline;
+}
+
+footer {
+  bottom: 0;
+  left: 0;
+  position: fixed;
+  padding: 0 0 10px 10px;
+  color: var(--color);
+  cursor: pointer;
+}
+
+footer::before {
+  content: "You should click the images :)";
+}
+
+footer:active::before {
+  content: "Not me!! >:(";
+  font-size: 40px;
 }

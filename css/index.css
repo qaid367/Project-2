@@ -1,6 +1,64 @@
+:root {
+  --hue: 400; /* change me */
+  --shadow: oklch(25% 0.2 var(--hue));
+  --text-shadow: 0 2px 2px var(--shadow);
+  --color: rgb(148, 85, 26);
+}
+
+@keyframes dropDown {
+  0% {
+    transform: translateY(-20px);
+    letter-spacing: 0ch;
+    color: rgb(137, 63, 63);
+  }
+
+  100% {
+    color: var(--color);
+    transform: translateY(0);
+  }
+}
+
 header {
-    text-align: center;
+  text-align: center;
+  color: var(--color);
+  text-shadow: var(--text-shadow);
+  font-weight: bolder;
+  letter-spacing: 4px;
+  font-size: 2vi;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 20px;
+}   
+
+.text h1 {
+  font-size: 2;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  width: 450px;
+  color: var(--color);
+}
+
+.text h4 {
+    font-size: 30px;
+}
+
+.previews img {
+    width: 400px;
+    box-shadow: 0 0 6px .1px #000;
+}
+
+#preview-footer {
     color: white;
-    text-shadow: 2px 2px 5px #000;
-    letter-spacing: 4px;
+    opacity: .8;
+    text-shadow: var(--text-shadow);
 }
